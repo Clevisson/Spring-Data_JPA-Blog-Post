@@ -1,0 +1,35 @@
+#Lista todos os filmes
+GET http://127.0.0.1:9000/movies
+
+###
+#Lista um filme pelo id
+GET http://localhost:9000/movies/3
+
+###
+#Deleta um filme pelo id
+DELETE http://127.0.0.1:9000/movies/1
+
+###
+#Cria um novo filme
+POST http://127.0.0.1:9000/movies
+Content-Type: application/json
+
+{
+  "title": "Batman - O Cavaleiro Das Trevas",
+  "urlCover": "urlteste",
+  "descr": "Após dois anos desde o surgimento do Batman (Christian Bale), os criminosos de Gotham City têm muito o que temer.",
+  "castr": "Cristian Bale, Heath Ledger"
+}
+
+###
+
+#Atualiza um filme pelo id
+PUT http://127.0.0.1:9000/movies/1
+Content-Type: application/json
+
+{
+  "title": "Tropa de Elite - O inimigo agora é Outro II",
+  "urlCover": "urlteste",
+  "descr": "O Inimigo agora é o Sistema",
+  "castr": "Wagner Moura"
+}
